@@ -19,25 +19,53 @@
 
 <p id="result">This text will be replaced </p>
 
+<div class="container">
+    <img src="Antlion.jpg" alt="Antlion" id="image" height="100" width="100" onclick="swapImage()">
+</div>
+
 <script>
-    let wrong = 0;
-    let correct = 0;
+   let wrong = 0;
+        let correct = 0;
 function checkGuess(){
     console.log("Getting form values")
-    sname = document.getElementById("form1_sname").value 
-    guess = document.getElementById("form1_guess").value 
-
-    out = document.getElementById("result")
-    if(sname==guess){
-    alert("You got it right")
-    correct=correct+1
-    out.innerhtml = "correct: " + correct + " " + "wrong: " + wrong
+    name = document.getElementById("form1_name").value
+    guess = document.getElementById("form1_guess").value
+       
+    result = document.getElementById("result")
+    if(name==guess){
+        alert("You got it right")
+        correct=correct+1
+        result.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
     } else {
-        alert("Wrong musician")
-        wrong = wrong+1
-        out.innerHTML = "correct: " + correct + " " + "wrong: " +wrong 
+        alert("Wrong Musician")
+        wrong=wrong+1
+        result.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
     }
 }
+
+let usingImage = 1;
+
+function swapImage(){
+    image = document.getElementById("image")
+    switch (usingImage) {
+                    case 1:
+                        image.src = "Antlion.jpg"
+                        usingImage = usingImage + 1
+                        break
+                    case 2:
+                        image.src = "Dragonfly.jpg"
+                        usingImage = usingImage + 1
+                        break
+                    case 3:
+                        image.src = "yellow ants.jpg"
+                        usingImage = usingImage + 1
+                        break
+                    default:
+                        break
+                }
+}
+    
+            
 
        
 </script>
