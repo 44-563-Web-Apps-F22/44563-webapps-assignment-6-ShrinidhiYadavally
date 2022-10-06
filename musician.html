@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <title>JavaScript</title>
+    <head>
+        <title>JavaScript</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+    </head>
+
  
 <body>
 
-<h2>Musician guess by Shrinidhi Yadavally</h2>
-
-<form>
-    <label for="form1_sname">Enter the secret musician name </label>
-    <input type ="password" id="form1_sname" name="form1_sname" min=10 max=50 step=2 value="John Lennon"> <br>
-
-    <label for="form1_guess">Guess the musician </label>
-    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
-
-    <input type="button" onclick="checkGuess()" value="Check the guess">
-</form>
-
-
-<p id="result">This text will be replaced </p>
+<h2 style="margin-left:1cm ;">Musician guess by SHrinidhi Yadavally</h2>
 
 <div class="container">
-    <img src="Antlion.jpg" alt="Antlion" id="image" height="100" width="100" onclick="swapImage()">
+<form>
+     <div class="form-group">
+    <label for="form1_name">Enter the secret musician name </label>
+    <input type ="password" id="form1_name" class="form-control" name="form1_name" min=10 max=50 step=2 value="John Lennon"> <br>
+    </div>
+    <div class="form-group">
+    <label for="form1_guess">Guess the musician </label>
+    <input type ="text" id="form1_guess" class="form-control" name="form1_guess" autofocus> <br>
+</div>
+    <input type="button" class="btn btn-primary" onclick="checkGuess()" value="Check the guess">
+</form>
+<br>
+<p id="result">This text will be replaced </p>
 </div>
 
-<script>
-    let wrong = 0;
-    let correct = 0;
+
+
+<div class="container">
+    <img src="beetles.png" alt="beetles" id="image" height="100" width="100" onclick="swapImage()">
+</div>
+
+<script> 
+        let wrong = 0;
+        let correct = 0;
 function checkGuess(){
     console.log("Getting form values")
     name = document.getElementById("form1_name").value
@@ -69,14 +84,12 @@ function swapImage(){
                         break
                     default:
                         break
-    
-                    }
+                }
             
 }
-            
-
-       
 </script>
+
+
 
 </body>
 </html> 
